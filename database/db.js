@@ -4,8 +4,8 @@ const fs = require("fs");
 const client = mongo.MongoClient;
 const url = "mongodb://localhost:27017/mydb";
 
-var db = client.connect(url);
-var mydb = db.db("my-app");
+var myClient = client.connect(url);
+var mydb = myClient.db("my-app");
 
 mydb.collections("profiles").drop();
 mydb.collections("posts").drop();
@@ -50,3 +50,5 @@ fs.readFile("schema/comment.json", "utf-8", (err, data) => {
   // print JSON object
   console.log(comment);
 });
+
+// export { mydb };
