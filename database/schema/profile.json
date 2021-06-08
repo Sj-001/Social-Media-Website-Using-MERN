@@ -1,0 +1,33 @@
+{
+  "collMod": "profiles",
+  "validator": {
+    "$jsonSchema": {
+      "bsonType": "object",
+      "required": ["user_id", "username", "name", "password"],
+      "properties": {
+        "user_id" : {
+          "bsonType": "number"
+        },
+        "username" : {
+          "bsonType": "string"
+        },
+        "name": {
+          "bsonType": "string"
+        },
+        "password":{
+          "bsonType": "string"
+        },
+        "followers":{
+          "bsonType": "number"
+        },
+        "following":{
+          "bsonType": "number"
+        },
+        "type":{
+          "bsonType": "string"
+        }
+      }
+    }
+  },
+  "validationLevel": "moderate"
+}

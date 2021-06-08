@@ -1,0 +1,27 @@
+{
+  "collMod": "comments",
+  "validator": {
+    "$jsonSchema":{
+      "bsonType": "object",
+      "required": ["user_id", "post_id", "comment_id", "person_id", "comment"],
+      "properties":{
+        "user_id":{
+          "bsonType": "number"
+        },
+        "post_id":{
+          "bsonType": "number"
+        },
+        "comment_id":{
+          "bsonType": "number"
+        },
+        "person_id":{
+          "bsonType": "number"
+        },
+        "comment":{
+          "bsonType": "string"
+        }
+      }
+    }
+  },
+  "validationLevel": "moderate"
+}
